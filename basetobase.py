@@ -1,11 +1,8 @@
 #!/usr/bin/python
 
-# Qcrylib core
+# Base_to_Base universal library for convertions and coding
 
-# CONSTS
-NULL = ''
-
-# Bases
+# Bases (alphabets)
 b2 = '01'
 b4 = '0123'
 b8 = '01234567'
@@ -91,6 +88,19 @@ def hextooct(n:str):
 def hextodec(n:str):
 	return basetobase(n, b16, b10)
 
+# n:str (2->8)
+def bintooct(n:str):
+	return basetobase(n, b2, b8)
+
+# n:str (2->10)
+def bintodec(n:str):
+	return basetobase(n, b2, b10)
+
+# n:str (2->16)
+def bintohex(n:str):
+	return basetobase(n, b2, b16)
+
+
 # Base to ascii 256 (16->256)
 # @param s must be of the even length maintaining integrity of bytes
 # ("ff40")-yes ("ff4")-no
@@ -109,12 +119,14 @@ def hextoascii(s):
 		return r
 
 # Base to ascii 256 (from->16->256)
-def basetoascii(s, from_:''):
+# this function only works effectively with bases 2, 4, 16
+def basetoascii(s, from_):
 	if from_==b16:
 		return hextoascii(s)
 	else:
-
-	
+		s=basetobase(s, from_, b16)
+		return hextoascii(s)
+		
 
 # Ascii to base (256->16->to)
 def asciitobase(s, to):
@@ -127,6 +139,3 @@ def asciitobase(s, to):
 	if to==b16: return a
 	else:
 		return basetobase(a, b16, to)
-
-print(asciitobase('Hello!',b16))
-print(hextoascii('fff7'))
