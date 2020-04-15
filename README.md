@@ -1,7 +1,7 @@
 # Base_to_Base
 Functions for working with number systems, conversions and coding.
 
-There are 2 main conversion functions,
+There are 3 main conversion functions,
 
 from a dec to other base:
 `numtobase(n, to_alphabet):str`
