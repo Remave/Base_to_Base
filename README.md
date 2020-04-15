@@ -41,8 +41,14 @@ bintohex(n)
 ```
 
 Also is function for converting ascii to a base and back:
-```
-asciitobase(s, to)
+`asciitobase(s, to)`,
+`basetoascii(s, from)`
 and
-basetoascii(s, from)
+`hextoascii(s)`
+
+```
+asciitobase('Hello!', b2)
+> 10010000110010101101100011011000110111100100001
+hextoascii('48656c6c6f21')
+> Hello!
 ```
