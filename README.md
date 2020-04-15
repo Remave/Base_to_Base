@@ -3,13 +3,13 @@ Functions for working with number systems, conversions and coding.
 
 There are 2 main conversion functions,
 
-from dec to other base:
+from a dec to other base:
 `numtobase(n, to_alphabet):str`
 ```
 print(numtobase(32, '01'))
 > 100000
 ```
-from a base to bec:
+from base to bec:
 `basetodec(s, from_alphabet):str`
 ```
 print(basetodec('ff', '0123456789abcdef'))
@@ -40,7 +40,7 @@ bintodec(n)
 bintohex(n)
 ```
 
-Also is function for converting ascii to base and back:
+Also is function for converting ascii to a base and back:
 ```
 asciitobase(s, to)
 and
