@@ -21,7 +21,7 @@ and conversion base with any alphabet to base with other alphabet:
 print(basetobase('f745', '0123456789abcdef', '0123'))
 > 33131011
 ```
-Alphabet constants are provided in the package `b2, b4, b8, b10, b16, b32, b34`.
+Alphabet constants are provided in the package `b2, b4, b8, b10, b16, b32, b62, b64`.
 
 Other functions:
 
