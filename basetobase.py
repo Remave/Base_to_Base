@@ -101,9 +101,9 @@ def bintohex(n:str):
 	return basetobase(n, b2, b16)
 
 
-# Base to ascii 256 (16->256)
+# Base to ascii 128 (16->128)
 # @param s must be of the even length maintaining integrity of bytes
-# ("ff40")-yes ("ff4")-no
+# ("7f40")-yes ("7f4")-no
 def hextoascii(s):
 	if len(s)%2!=0:
 		return ''
@@ -118,7 +118,7 @@ def hextoascii(s):
 			r+=chr(int(hextodec(n)))
 		return r
 
-# Base to ascii 256 (from->16->256)
+# Base to ascii 128 (from->16->128)
 # this function only works effectively with bases 2, 4, 16
 def basetoascii(s, from_):
 	if from_==b16:
@@ -128,7 +128,7 @@ def basetoascii(s, from_):
 		return hextoascii(s)
 		
 
-# Ascii to base (256->16->to)
+# Ascii to base (128->16->to)
 def asciitobase(s, to):
 	a=''
 	for c in s:
