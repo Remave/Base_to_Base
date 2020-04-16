@@ -10,7 +10,7 @@ print(numtobase(32, '01'))
 > 100000
 ```
 from base to bec:
-`basetodec(s, from_alphabet):str`
+`basetodec(s, from_alphabet):int`
 ```
 print(basetodec('ff', '0123456789abcdef'))
 > 255
