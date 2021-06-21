@@ -41,9 +41,9 @@ def basetodec(s:str, from_:''):
 	return r
 
 # Convert a base to other base
-# @param s    : input string
-# @param in_  : input base of s string
-# @param out_ : output base
+# s    : input string
+# in_  : input base of s string
+# out_ : output base
 def basetobase(s, in_, out_):
 	# if s == NULL or in_ == NULL or out_ == NULL:
 	# 	return NULL
